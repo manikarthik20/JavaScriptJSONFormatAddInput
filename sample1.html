@@ -1,0 +1,53 @@
+<html>
+<body>
+
+<!--The SELECT element.-->
+  APLLICATION : <select id="sel" onchange="show(this)">
+  
+  <option value="">--select---</option>
+  <option value="">CBS</option>
+  <option value="">Windows</option>
+        <option value="">ATTENDANCE</option>
+    </select>&nbsp;&nbsp;&nbsp;
+	
+	User ID:
+<input type="text" id="userId" name="name"> &nbsp;&nbsp;&nbsp;
+
+ <label for="ByPassEnable">
+    <input type="checkbox" id="ByPassEnable" onclick="ByPassEnabled(this)" />
+    ToBypassEnabled?
+</label>
+<div id="validUpto" style="display: none">
+    BypassValidUpto
+    <input type="date" id="byPassValidUpto" />
+	
+	WindowsLoginType : <select id="remarks" onchange="show(this)">
+  
+  <option value="">--select---</option>
+  <option value="">Password</option>
+  <option value="">Fingerprint</option>
+        <option value="">Both</option>
+    </select>&nbsp;&nbsp;&nbsp;
+	
+</div>	&nbsp;&nbsp;&nbsp;	
+
+		<button type="button">Add</button>	
+				
+<br>
+<br>
+<br>
+
+<button type="submit">Submit</button> <br> <br>
+
+<script>
+	 function ByPassEnabled(ByPassEnable) {
+        var validUpto = document.getElementById("validUpto");
+        validUpto.style.display = ByPassEnable.checked ? "block" : "none";
+    }
+	
+</script>
+
+</body>
+</html>
+
+ 

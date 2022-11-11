@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<body>
+<!--The SELECT element.-->
+<form onsubmit="check()">
+APLLICATION : 
+<select id="sel" onchange="show(this)">
+    <option value="">--select---</option>
+    <option value="">CBS</option>
+    <option value="">Windows</option>
+    <option value="">ATTENDANCE</option>
+</select>&nbsp;&nbsp;&nbsp;User ID:
+<input type="text" id="fname" name="name"> &nbsp;&nbsp;&nbsp;
+
+ <input type="checkbox" id="_byPassAllowed_id" name="Bypass" value="bypassEnable" />To Enable ByPass &nbsp;&nbsp;&nbsp;
+
+By Pass Valid Upto
+
+<input type="date" id="userBypassValidUpto" name="Valid">&nbsp;&nbsp;&nbsp;WindowsLoginType : 
+<select id="remarks" onchange="show(this)">
+    <option value="">--select---</option>
+    <option value="">Password</option>
+    <option value="">Fingerprint</option>
+    <option value="">Both</option>
+</select>&nbsp;&nbsp;&nbsp;<button type="button">Add</button>
+<br>
+<br>
+<br>
+<button >Submit</button> <br> <br>
+</form>
+<script>
+    function check(){
+ console.log(document.getElementById('fname').value);
+    }
+</script>
+
+</body>
+</html>
+
+
+

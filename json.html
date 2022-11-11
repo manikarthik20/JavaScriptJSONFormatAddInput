@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+
+
+
+</head>
+
+<body>
+<div id="header">
+Send Form's data as JSON
+</div>
+
+<form>
+    <div class="form-control">
+        <label for="name">Full Name</label>
+        <input id="name" name="name" type="text" />
+    </div>
+    <div class="form-control">
+        <label for="email">Email Address</label>
+        <input id="email" name="email" type="email" />
+    </div>
+    <div class="form-control">
+        <label for="message">Enter a Message</label>
+        <textarea id="message" name="message" rows="6" cols="65"></textarea>
+    </div>
+    <button class="btn" type="submit">Send</button>
+</form>
+
+<script type="text/javascript">
+    const form = document.getElementById('contact-form');
+    
+    form.addEventListener('submit', callbackFunction);
+                          
+    function callbackFunction(event) {
+        event.preventDefault();
+        const myFormData = new FormData(event.target);
+    
+    
+    
+       const formDataObj = {};
+        myFormData.forEach((value, key) => (formDataObj[key] = value));
+        console.log(formDataObj);
+    };
+    </script>
+
+</body>
+</html>

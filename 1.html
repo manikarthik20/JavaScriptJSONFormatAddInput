@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    
+    <input type="text">
+      <button onclick="add()">Add</button>
+      <button onclick="remove()">remove</button>
+      <div id="new_chq"></div>
+      <input type="hidden" value="1" id="total_chq">
+      <div id="sele_select"></div>
+      
+        <option hidden value="1" id="total_options">manikarthik </option>
+     
+  <script>
+    function add(){
+      var new_chq_no = parseInt($('#total_chq').val())+1;
+      var new_input="<input type='text' id='new_"+new_chq_no+"'>";
+      $('#new_chq').append(new_input);
+      $('#total_chq').val(new_chq_no)
+
+      var new_select = parseInt($('#total_options').val())+1;
+      var new_sele = "<select id='sele_"+new_select+"'>mani<option>manikarthik </option></select>";
+      $('#sele_select').append(new_sele);
+      $('#total_options').val(new_select);
+    }
+    function remove(){
+      var last_chq_no = $('#total_chq').val();
+      console.log(last_chq_no);
+      if(last_chq_no>1){
+        $('#new_'+last_chq_no).remove();
+        $('#total_chq').val(last_chq_no-1);
+      }
+
+      var last = $('#total_options').val();
+      console.log(last);
+      if(last>1){
+        $('#sele_'+last).remove();
+        $('#total_options').val(last-1);
+        
+    }
+    }
+    
+  </script>
+</body>
+</html>
